@@ -50,19 +50,17 @@ post | /admin/makeadmin | makeAdmin | decodetoken, isAdmin
 delete | /admin/:id | deleteFood | decodetoken, isAdmin
 
 ### Order Information
-There is postman file with this project [foodOrdering.postman_collection.json]() that would help during testing. Also, you can quickly create test users with the [createUser.js]() file by **uncommenting** the last line in app.js file to have `require("./createUser")`
+Quickly create test users with the [createUser.js]() file by **uncommenting** the last line in app.js file to have `require("./createUser")`
 
 ```
 ...
-...
-...
 app.listen(PORT, async () => {
     await require("./config/mongodbconfig")()
-    console.log(`::> Server listening on port ${ PORT } @ http://localhost:${ PORT }`)
+    console.log(`Server listening on http://localhost:${ PORT }`)
 })
 
 module.exports = app
-//  require("./createUser")             <<<<--------
+//  require("./createUser")      
 ```
 In the console you would get this same message
 ```
