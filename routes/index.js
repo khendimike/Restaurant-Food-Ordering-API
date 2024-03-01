@@ -3,10 +3,10 @@ const router = express.Router()
 const controller = require("../controller/index")
 const  auth = require("../middleware/auth-middleware")
 
-router.use(
-    "/docs",
-    require("./doc")
-)
+// router.use(
+//     "/docs",
+//     require("./doc")
+// )
 
 router.use(
     "/admin",
