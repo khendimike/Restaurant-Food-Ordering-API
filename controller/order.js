@@ -7,8 +7,8 @@ class order {
     static async checkout(req, res, next) {
         try {
             const userId = req.user
-            const itemsToCheckout = req.body.items
-            const itemsToCheckoutSplit = itemsToCheckout.split(",")
+            const itemsToCheckout = req.body.items;
+            const itemsToCheckoutSplit = itemsToCheckout.split(",");
 
             let totalPrice = 0
             let itemSummary = []
