@@ -6,6 +6,7 @@ class CartClass {
     try {
       const userId = req.user
       const foodToAddToCart = req.params.id.toString()
+
       let qty = req.params.qty
 
       const foundFood = await Food.findById(foodToAddToCart)
