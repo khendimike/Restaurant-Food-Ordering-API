@@ -58,7 +58,7 @@ class CartClass {
 
       if (findCart.userId.toString() == userId._id.toString() && findCart.qty.toString() !== newQty.toString()) {
         if ( newQty <= 0 || null || undefined ) {
-          return res.status(501).json("Item can not be less then ONE, so not implemented")
+          return res.status(501).json("Item can not be less then ONE")
         }
         if (newQty >= 1) {
           await findCart.updateOne({
@@ -67,7 +67,7 @@ class CartClass {
          return res.status(201).json(`${findCart.foodId} qty was updated to ${newQty}`)
         }
       }
-      return res.status(200).json("in it really state nothing happened")
+      return res.status(200).json("Failed to edit cart")
     } catch (error) {
       next(error)
     }
@@ -88,7 +88,7 @@ class CartClass {
         return res.status(201).json(`${checkCart[0].foodId} was removed from cart`)
       }
      
-      return res.status(200).json("looks like the item was not found")
+      return res.status(200).json("Item not found")
     } catch (error) {
       next(error)
     }
