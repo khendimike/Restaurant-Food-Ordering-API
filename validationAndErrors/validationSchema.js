@@ -37,7 +37,7 @@ export default {
       .optional()
       .error(
         new Error(
-          "phoneNumber field needs to have a 10 chars and they must all be numbers"
+          "phoneNumber field needs to have a 10 digits"
         )
       ),
     birthDate: Joi.date()
