@@ -8,13 +8,7 @@ $ npm install
 ```
 
 ## Start-Up
-Rename the [`.dev-env` file](`https://github.com/innext/foodOrdering#.dev-env`) to .env
-```
-$ mv .dev-env .env
-```
-Now, open the file to include the port the server would listen on and the mongodb url for database.
-
-State-Up the server by running
+Start-Up the server by running
 ```
 $ node app.js
 // or nodemon if installed too
@@ -54,11 +48,6 @@ Quickly create test users with the [createUser.js]() file by **uncommenting** th
 
 ```
 ...
-app.listen(PORT, async () => {
-    await require("./config/mongodbconfig")()
-    console.log(`Server listening on http://localhost:${ PORT }`)
-})
-
 module.exports = app
 //  require("./createUser")      
 ```
@@ -67,7 +56,4 @@ In the console you would get this same message
 Here is the login details for admin, email: admin@testmail.com, password: Password&123
 Here is the login details for user, email: user@testmail.com, password: Password&123
 ```
-You can use those details to start, do not for to comment that line back when the users are created. **Enjoy**
-
-### Issues
-Any issue? please create the issue with full details of the issue, would get to it.
+You can use those details to start.
