@@ -31,7 +31,7 @@ class CartClass {
         }
       }
 
-      return res.status(501).json(`this isnt implemented as you have ${foundFood.name} in your cart before`)
+      return res.status(501).json(`${foundFood.name} already in your cart`)
     
     } catch (error) {
       next(error)
@@ -64,7 +64,7 @@ class CartClass {
           await findCart.updateOne({
             qty: newQty
           })
-         return res.status(201).json(`${findCart.foodId} qty was updated to ${newQty}`)
+         return res.status(201).json(`${findCart.foodId} quantity was updated to ${newQty}`)
         }
       }
       return res.status(200).json("Failed to edit cart")

@@ -16,7 +16,7 @@ class order {
                 const eachId = itemsToCheckoutSplit[eachItemInUserCart]
 
                 const detailsOfItemFromCart = await Cart.findById(eachId)
-                if (detailsOfItemFromCart == null) return res.status(200).json("looks like there is no user with that cart or cart is empty")
+                if (detailsOfItemFromCart == null) return res.status(200).json("No user with that cart or cart is empty")
                 if (detailsOfItemFromCart.userId.toString() === userId._id.toString()) {
                     const oneFood = await Food.findById(detailsOfItemFromCart.foodId)
                     const oneFoodPrice = oneFood.price
@@ -38,7 +38,7 @@ class order {
 
             if (userAddress == null || userAddress == undefined 
                 || userPhone == null || userPhone == undefined) {
-                return res.status(501).json("this checkout cant be implemented, please update your profile to have the address and phone number")
+                return res.status(501).json("Unable to checkout. Please update your profile to have the address and phone number")
             }
 
             await new Order({
