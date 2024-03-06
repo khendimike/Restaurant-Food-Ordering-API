@@ -14,7 +14,6 @@ let adminName = "admin",
 async function adminUser( name, password, email, role ) {
     const checkUser = await User.findOne({email: email})
     if (checkUser) {
-        console.log(`User dey before`)
         console.log(`Here is the login details for user, email: ${email}, password: ${password}`)
         return
     }
@@ -52,7 +51,7 @@ async function foodAdding( name, description, price, category, available ) {
     try {
         const checkFood = await Food.findOne({name: name})
         if (checkFood) {
-            console.log(`Food dey before`)
+            console.log(`Food`)
             return
         }
         await new Food({
