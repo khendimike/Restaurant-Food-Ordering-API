@@ -1,8 +1,8 @@
-## About this work
-This the backend project for a food ordering platform without the implementation of the payment system. This a [NodeJS]() project built with this helping hands [ExpressJS](), [Mongoose](), [Bcrypt](), [JSONwebtoken](), [Dotenv](), [Body-Parser](), and [Nodemon]() for development.
+## About the project
+This the backend API for a Restaurant food ordering platform. This a [NodeJS]() project built with: [ExpressJS](), [Mongoose](), [Bcrypt](), [JSONwebtoken](), [Dotenv](), [Body-Parser](), and [Nodemon]() for development.
 
 ## Installation
-Use [`npm install` comman]() to install the dependencies.
+Use `npm install` to install the dependencies.
 ```
 $ npm install
 ```
