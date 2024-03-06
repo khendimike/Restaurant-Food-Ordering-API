@@ -44,7 +44,7 @@ post | /admin/makeadmin | makeAdmin | decodetoken, isAdmin
 delete | /admin/:id | deleteFood | decodetoken, isAdmin
 
 ### Order Information
-Quickly create test users with the [createUser.js]() file by **uncommenting** the last line in app.js file to have `require("./createUser")`
+Quickly create test users with the [createUser.js]() file by **uncommenting** the last line in app.js 
 
 ```
 ...
